@@ -8,7 +8,7 @@ class PhotoRepository
 {
     public function getAllPhotos()
     {
-        return Photo::all();
+        return Photo::orderBy("id", "desc")->get();
     }
 
     public function insertPhotoRow($data)
